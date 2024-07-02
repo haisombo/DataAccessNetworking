@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		83EEB5202C3394E600DD62BF /* DataAccessNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EEB51F2C3394E600DD62BF /* DataAccessNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83EEB5292C33974200DD62BF /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEB5282C33974200DD62BF /* DataAccess.swift */; };
+		83EEB52B2C3399DD00DD62BF /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEB52A2C3399DD00DD62BF /* EndPoint.swift */; };
+		83EEB52D2C339A1100DD62BF /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEB52C2C339A1100DD62BF /* RequestMethod.swift */; };
+		83EEB52F2C339A3A00DD62BF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEB52E2C339A3A00DD62BF /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83EEB51C2C3394E600DD62BF /* DataAccessNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataAccessNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEB51F2C3394E600DD62BF /* DataAccessNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAccessNetworking.h; sourceTree = "<group>"; };
+		83EEB5282C33974200DD62BF /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		83EEB52A2C3399DD00DD62BF /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		83EEB52C2C339A1100DD62BF /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		83EEB52E2C339A3A00DD62BF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,10 @@
 			isa = PBXGroup;
 			children = (
 				83EEB51F2C3394E600DD62BF /* DataAccessNetworking.h */,
+				83EEB5282C33974200DD62BF /* DataAccess.swift */,
+				83EEB52A2C3399DD00DD62BF /* EndPoint.swift */,
+				83EEB52C2C339A1100DD62BF /* RequestMethod.swift */,
+				83EEB52E2C339A3A00DD62BF /* NetworkError.swift */,
 			);
 			path = DataAccessNetworking;
 			sourceTree = "<group>";
@@ -93,6 +105,7 @@
 				TargetAttributes = {
 					83EEB51B2C3394E600DD62BF = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -129,6 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EEB52B2C3399DD00DD62BF /* EndPoint.swift in Sources */,
+				83EEB52F2C339A3A00DD62BF /* NetworkError.swift in Sources */,
+				83EEB52D2C339A1100DD62BF /* RequestMethod.swift in Sources */,
+				83EEB5292C33974200DD62BF /* DataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +280,8 @@
 		83EEB5242C3394E600DD62BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -284,8 +303,9 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kosign.wegarden.DataAccessNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +314,8 @@
 		83EEB5252C3394E600DD62BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -315,7 +337,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kosign.wegarden.DataAccessNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
